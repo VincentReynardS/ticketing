@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nats-test-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nats-test
+  template:
+    metadata:
+      labels:
+        app: nats-test
+    spec:
+      containers:
+        - name: nats-test
+          image: us.gcr.io/ticketing-dev-327708/nats-test
