@@ -1,6 +1,7 @@
 name: deploy-auth
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
